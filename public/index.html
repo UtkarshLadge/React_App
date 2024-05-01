@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+    <style>
+        .navbar-nav .nav-link,
+.navbar-brand {
+    font-weight: bold;
+}
+
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+            margin-left: 10;
+            margin-right: 10;
+            white-space: 10;
+        }
+    
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    
+        
+        .timer {
+    position: fixed;
+    top: 101px; 
+    right: 200px; 
+    z-index: 1001; 
+    color: orangered; 
+    font-size: 18px;
+    font-weight: bold; 
+  }
+
+        .P1 {
+        width: 35%; 
+        text-align: justify; 
+    }
+    
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            
+        }
+
+        .paragraph-container {
+        width: 50%; 
+        margin: 0 auto; 
+        text-align: justify; 
+    }
+        
+    </style>
+    
+    
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Utkarsh</a>
+          </div>
+         
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacts">Contacts</a> 
+              </li>
+            </ul>
+            
+        </nav>
+      </div>
+
+      
+<div class="timer" id="timer"></div>
+
+<script>
+  function updateTimer() {
+      var now = new Date();
+      var hours = now.getHours();
+      var period = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12 || 12; 
+      var minutes = now.getMinutes().toString().padStart(2, '0');
+      var seconds = now.getSeconds().toString().padStart(2, '0');
+      var formattedTime = hours + ":" + minutes + ":" + seconds + " " + period;
+      document.getElementById("timer").textContent = formattedTime;
+  }
+
+
+  setInterval(updateTimer, 1000);
+
+  updateTimer();
+</script>
+<br><br>
+<br><br>
+<br><br>
+
+
+<div class="container">
+<section style="display: flex;">
+    <div style="vertical-align: top;">
+    <h3>Hello, It's Me</h3>
+    <h2>Utkarsh</h2>
+    <h3>And I'm a <span style="color: orangered;">Frontend Developer|</span></h3>
+    <div class="content">
+        <div class="P1">    
+    <p>I love building websites and pour my dedication into making 
+        them awesome. I'm committed to my work and always 
+        strive for excellence.</p>
+    </div>
+    </div>
+      <button type="button" class="btn btn-primary">Contact</button>
+    </div>
+    <div class="img" style="display: inline-block; margin-right: 250px;">
+      <div class="image">
+          <img src="boy.jpg" style="width: 250px; height: 250px;">
+      </div>
+  </div>  
+    
+    </section>
+</div>
+    
+<br><br>
+<br><br>
+
+      <section id="about">
+      <div class="container">
+        <h2 class="text-center">About me</h2>
+        <div class="paragraph-container">
+        <p>As a dynamic and risk-seeking individual, I am fueled by a passion for exploring possibilities and pushing boundaries in the ever-evolving field of technology.
+            Committed to delivering high-quality work without compromise, I bring a fresh perspective and enthusiasm to every project I undertake. 
+            Having recently completed my journey as a full-stack web development learner, I am excited to apply my newfound skills and knowledge to real-world projects.
+            Despite being a fresher, I have successfully executed a few projects that showcase my dedication and ability to adapt quickly to emerging technologies.</p>
+        </div>
+        <div class="text-center">
+          <button type="button" class="btn btn-primary">Resume</button>
+        </div>
+      </div>
+    </section>
+      <br><br>
+      <br><br>
+
+      <section id="skills">
+      <div class="container-fluid">
+        <h1 class="text-center">Skills</h1>
+        <p class="text-center">Professional Skills and Tools</p>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="bg-white border rounded shadow-sm text-center d-flex align-items-center justify-content-center">
+                                <img src="react.png" alt="React" style="max-width: 100%; height: auto;">
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="bg-white border rounded shadow-sm text-center d-flex align-items-center justify-content-center">
+                                <img src="nodej.png" alt="Node.js" style="max-width: 100%; height: auto;">
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="bg-white border rounded shadow-sm text-center d-flex align-items-center justify-content-center">
+                                <img src="mongodb.png" alt="MongoDB" style="max-width: 52%; height: auto;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="bg-white border rounded shadow-sm text-center d-flex align-items-center justify-content-center">
+                                <img src="html.png" alt="HTML" style="max-width: 100%; height: auto;">
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="bg-white border rounded shadow-sm text-center d-flex align-items-center justify-content-center">
+                                <img src="css.png" alt="CSS" style="max-width: 100%; height: auto;">
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="bg-white border rounded shadow-sm text-center d-flex align-items-center justify-content-center">
+                                <img src="js.png" alt="JavaScript" style="max-width: 100%; height: auto;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="bg-white border rounded shadow-sm text-center d-flex align-items-center justify-content-center">
+                                <img src="git.png" alt="Git" style="max-width: 100%; height: auto;">
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="bg-white border rounded shadow-sm text-center d-flex align-items-center justify-content-center">
+                                <img src="aws.jpg" alt="AWS" style="max-width: 100%; height: auto;">
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="bg-white border rounded shadow-sm text-center d-flex align-items-center justify-content-center">
+                                <img src="vscode1.png" alt="Visual Studio Code" style="max-width: 100%; height: auto;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+    <br><br>
+    <br><br>
+
+    <section id="projects">
+      <div class="container-fluid">
+        <h1 class="text-center">Projects</h1>
+        <p class="text-center">Here you can find some of the projects that I created</p>
+
+        
+  <br>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card mt-5">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+                <img src="zen.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center">Zen Query Ticketing</h5>
+                <p class="card-title text-center">The platform allows users to raise tickets based on their queries, and mentors can provide solutions.</p>
+                <p class="card-text text-center"><a href="https://www.facebook.com/"target="_new" class="text-decoration-underline">See Live GitHub Repo</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="d-flex justify-content-center">
+             <img src="user.png" class="card-img-top" alt="..." style="width: 250px; height: auto;">
+            </div>
+              <div class="card-body">
+                <h5 class="card-title text-center">User Management System</h5>
+                <p class="card-title text-center">A web application developed for user management where CRUD operations can be made.</p>
+                <p class="card-text text-center"><a href="#" class="text-decoration-underline">See Live GitHub Repo</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">    
+              <div class="card-body">
+                <h5 class="card-title text-center">URL Shortener</h5>
+                <p class="card-title text-center">The application enables users to create personalized shortened URLs within individual accounts.</p>
+                <p class="card-text text-center"><a href="#" class="text-decoration-underline">See Live GitHub Repo</a></p>
+              </div>
+            </div>
+          </div>
+         
+          <div class="col-md-6">
+            <div class="card">    
+              <div class="card-body">
+                <h5 class="card-title text-center">Todo Application</h5>
+                <p class="card-title text-center">A task management app, facilitating the creation, editing, deletion, and completion tracking of tasks.</p>
+                <p class="card-text text-center"><a href="#" class="text-decoration-underline">See Live GitHub Repo</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        </div>
+        </div>
+        </div>
+
+    </div>
+  </section>
+
+      <br><br>
+
+    
+<section id = "contacts" class="bg-light py-3 py-md-5">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+        <h2 class="mb-4 display-5 text-center">Contact</h2>
+        <p class="text-secondary mb-5 text-center">Submit the form below so I can get back to you as soon as possible</p>
+       
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-lg-center">
+      <div class="col-12 col-lg-9">
+        <div class="bg-white border rounded shadow-sm overflow-hidden">
+
+          <form action="#!">
+            <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
+              <div class="col-12">
+                <label for="fullname" class="form-label">Full Name <span class="text-danger"></span></label>
+                <input type="text" class="form-control" id="fullname" name="fullname" value="" required>
+              </div>
+              <div class="col-12">
+                <label for="fullname" class="form-label">Email <span class="text-danger"></span></label>
+                <input type="text" class="form-control" id="fullname" name="fullname" value="" required>
+              </div>
+             
+              <div class="col-12">
+                <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+              </div>
+              <div class="col-12">
+                <div class="d-grid">
+                  <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                </div>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      
+</body>
+</html>
